@@ -61,8 +61,29 @@ except Exception as e:
     _TRENDER = None
     logger.info(f"TrendFetcher not available: {e}")
 
-# sentiment_analyzer2 provides analyze_sentiment(text) -> list(dict)
-from app.sentiment_engine.sentiment_analyzer2 import analyze_sentiment, analyze_post_comments
+# -----------------------------------------------------------
+# Optional Sentiment Integration
+# -----------------------------------------------------------
+
+try:
+    from app.sentiment_engine.sentiment_analyzer2 import (
+        analyze_sentiment,
+        analyze_post_comments,
+    )
+
+    _SENTIMENT_AVAILABLE = True
+    logger.info("Sentiment analyzer loaded successfully.")
+
+except ImportError as e:
+    _SENTIMENT_AVAILABLE = False
+
+    def analyze_sentiment(*args, **kwargs):
+        return [{"sentiment_score": 0.5}]
+
+    def analyze_post_comments(*args, **kwargs):
+        return {}
+
+    logger.warning(f"Sentiment analyzer unavailable: {e}")
 
 
 # Environment flag for Sheets usage
