@@ -1,299 +1,181 @@
- AI-Based Automated Content Marketing Optimizer
-
-> A complete, intelligent, end-to-end automated platform for generating, optimizing, evaluating, and improving digital marketing content — powered by LLMs, sentiment engines, trend analytics, ML predictions, A/B testing, and automated model retraining.
-
----
-
-## 📌 Overview
-
-The **AI-Based Automated Content Marketing Optimizer** is an advanced AI system designed to **automate and enhance the full digital content marketing lifecycle**, including content creation, trend optimization, sentiment scoring, performance tracking, A/B testing, and continuous ML-based learning.
-
-The system integrates:
-
-* **LLaMA LLMs/Gemini api** for content generation
-* **Advanced Sentiment Analysis** & **Emotion Detection**
-* **Trend-based Optimization Engine**
-* **A/B Testing Coach**
-* **Real-time Slack Alerts**
-* **Google Sheets for metrics & logging**
-* **Auto-Retrainer** for continuous ML model improvement
-* **Interactive Streamlit Dashboard**
-
-
-
----
-
-## 🎯 Key Objectives
-
-### ✔️ Fully Automated Content Pipeline
-
-Automatically generate, optimize, and score content using LLMs + sentiment + trend analysis.
-
-
-### ✔️ Predictive Content Intelligence
-
-AI predicts which content will perform best based on historical campaigns and A/B tests.
-
-
-### ✔️ Continuous ML Model Retraining
-
-The system self-improves by learning from engagement metrics, sentiment, and A/B test results.
-
-
-### ✔️ Centralized Dashboard & Analytics
-
-A beautiful Streamlit dashboard for content generation, sentiment analysis, A/B testing, metrics tracking, and model training.
-
-
----
-
-## 🧠 System Architecture (High-Level)
-
-### 1. **Content Engine**
-
-**Files:**
-
-* `content_generator.py`
-* `dynamic_prompt.py`
-* `trend_based_optimizer.py`
-
-**Functions:**
-
-* Generates content variations
-* Builds dynamic prompts
-* Applies trend-based scoring & optimization
-
----
-
-### 2. **Sentiment & Emotion Engine**
-
-**File:** `sentiment_analyzer.py`
-
-
-Key features:
-
-* HuggingFace sentiment + emotion models
-* Trend-aware sentiment scoring
-* Toxicity estimation
-* Multi-language detection
-* Google Sheets logging
-
----
-
-### 3. **A/B Testing Coach**
-
-**File:** `ab_coach.py`
-
-
-Capabilities:
-
-* A/B variant scoring
-* Probability-based performance prediction
-* Automated winner selection
-* Optional Slack notifications
-
----
-
-### 4. **Metrics Hub & Tracker**
-
-**Files:**
-
-* `metrics_hub.py`
-* `metrics_tracker.py`
-* `tracker.py`
-
-Functions:
-
-* Store daily metrics
-* Record campaign performance
-* Aggregate sentiment & trend scores
-* Feed ML training dataset
-
----
-
-### 5. **ML Engine (Model Training + Auto Retrainer)**
-
-**Files:**
-
-* `train_model.py`
-* `auto_retrainer.py`
-
-Features:
-
-* RandomForestClassifier + GridSearchCV
-* SMOTE balancing
-* Automatic model versioning
-* Continuous retraining pipeline
-* Slack notifications on completion
-
----
-
-### 6. **Integrations Layer**
-
-**Files:**
-
-* `sheets_connector.py`
-* `slack_notifier.py`
-* `trend_fetcher.py`
-
-Used for:
-
-* Google Sheets APIs
-* Slack alerts
-* Trend scoring system
-
----
-
-### 7. **Interactive Streamlit Dashboard**
-
-**File:** `streamlit_app.py`
-
-
-Tabs include:
-
-* Content generation
-* Sentiment engine
-* A/B comparison
-* Metrics hub
-* Manual / Auto model training
-* Slack notifications
-
----
-### 8. **Pipeline Orchestration**
-
-**File:** `run.py`
-Runs the complete workflow:
-
-1. Generate content
-2. Optimize using trends
-3. Sentiment analysis
-4. A/B test
-5. Metrics push
-6. Auto retrain
-7. Slack summary
-
-
----
-
-## 🗂️ Project Folder Structure
-
-```
-AI-Content-Marketing-Optimizer/
+🚀 AI-Based Automated Content Marketing Optimizer
+
+An end-to-end AI-powered platform that automates the complete content marketing lifecycle—from AI content generation to sentiment analysis, trend optimization, A/B testing, performance prediction, and continuous machine learning model retraining.
+
+Built using Python, Streamlit, Machine Learning, LLMs (Gemini/Groq), Hugging Face Transformers, Google APIs, Slack Integration, and CI/CD with GitHub Actions.
+
+✨ Features
+🤖 AI-powered content generation using Gemini/Groq LLMs
+📈 Trend-aware content optimization
+😊 Sentiment, emotion, and language detection
+📊 Marketing KPI tracking and analytics
+🧪 Automated A/B testing and winner prediction
+🧠 Machine Learning model training and auto-retraining
+📋 Google Sheets integration for campaign logging
+🔔 Slack notifications for pipeline events
+📉 Performance prediction using Random Forest
+🌐 Interactive Streamlit dashboard
+⚙️ Automated CI/CD with GitHub Actions
+🏗️ System Architecture
+                User Input
+                     │
+                     ▼
+        AI Content Generation
+       (Gemini / Groq LLM APIs)
+                     │
+                     ▼
+      Trend-Based Optimization
+                     │
+                     ▼
+     Sentiment & Emotion Analysis
+                     │
+                     ▼
+        A/B Testing Evaluation
+                     │
+                     ▼
+      Metrics Collection Engine
+                     │
+                     ▼
+      Machine Learning Pipeline
+                     │
+                     ▼
+     Auto Model Retraining
+                     │
+                     ▼
+ Google Sheets + Slack + Dashboard
+📂 Project Structure
+AI-Based-Automated-Content-Marketing-Optimizer
 │
 ├── app/
-│   ├── content_engine/
-│   │   ├── content_generator.py
-│   │   ├── dynamic_prompt.py
-│   │   ├── trend_based_optimizer.py
-│   │
-│   ├── sentiment_engine/
-│   │   └── sentiment_analyzer.py
-│   │
-│   ├── integrations/
-│   │   ├── sheets_connector.py
-│   │   ├── slack_notifier.py
-│   │   ├── trend_fetcher.py
-│   │
-│   ├── metrics_engine/
-│   │   ├── metrics_hub.py
-│   │   ├── metrics_tracker.py
-│   │   ├── tracker.py
-│   │
 │   ├── ab_testing/
-│   │   └── ab_coach.py
-│   │
+│   ├── content_engine/
+│   ├── integrations/
+│   ├── metrics_engine/
 │   ├── ml_engine/
-│   │   ├── train_model.py
-│   │   └── auto_retrainer.py
+│   └── sentiment_engine/
 │
 ├── streamlit_app.py
 ├── run.py
-├── .gitignore
-└── README.md
-```
+├── requirements.txt
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml
+├── README.md
+└── .gitignore
+🚀 Technology Stack
+Backend
+Python
+Streamlit
+Requests
+Aiohttp
+Artificial Intelligence
+Google Gemini API
+Groq API
+Hugging Face Transformers
+TextBlob
+Language Detection
+Machine Learning
+Scikit-learn
+Random Forest
+GridSearchCV
+SMOTE
+Joblib
+Data Processing
+Pandas
+NumPy
+Matplotlib
+Integrations
+Google Sheets API
+Slack SDK
+PyTrends
+PRAW (Reddit)
+Tweepy
+DevOps
+GitHub Actions
+CI/CD Pipeline
+Docker Ready
+⚡ Installation
 
----
+Clone the repository
 
-## 🌟 Features in Detail
+git clone https://github.com/pankajbhattacharjee/AI-Based-Automated-Content-Marketing-Optimizer.git
 
-### 🚀 AI Content Generator
+cd AI-Based-Automated-Content-Marketing-Optimizer
 
-* Produces multiple content variations
-* Platform-specific formatting
-* Keyword-injected prompting
-* Audience + tone personalization
-* Optional trend-based rewriting
+Install dependencies
 
-📄 *Source:*
-`content_generator.py`
+pip install -r requirements.txt
 
+Configure environment variables
 
----
+cp .env.example .env
 
-### 📊 Trend-Aware Optimization
+Run the application
 
-The optimizer enhances generated content by evaluating trending topics & keywords.
+python run.py
 
----
+Launch the dashboard
 
-### 💬 Deep Sentiment + Emotion Analysis
+streamlit run streamlit_app.py
+🧠 Machine Learning Pipeline
 
-* Sentiment (Positive/Negative/Neutral)
-* Polarity values
-* Emotion classification (Joy, Anger, Fear, etc.)
-* Trend score fusion
-* Toxicity estimation
+The project continuously improves prediction accuracy through:
 
+Data collection
+Feature engineering
+Random Forest training
+Hyperparameter tuning
+SMOTE balancing
+Automatic model versioning
+Continuous retraining
+Performance monitoring
+📊 Dashboard Features
+AI Content Generator
+Trend Optimizer
+Sentiment Analysis
+Emotion Detection
+A/B Testing
+Campaign Metrics
+ML Training
+Slack Notifications
+Google Sheets Logging
+🔄 CI/CD Pipeline
 
----
+The repository includes a production-ready GitHub Actions workflow that automatically performs:
 
-### 🆚 A/B Variant Coach
+Code linting (Flake8, Pylint)
+Dependency installation
+Security scanning
+Unit testing (Pytest)
+Python syntax validation
+Build verification
 
-Uses scoring logic to compute probability of success for content A and B.
+Every push and pull request triggers automated quality checks before changes are merged.
 
+📈 Future Improvements
+Multi-agent orchestration using LangGraph
+RAG-powered marketing knowledge base
+Multi-platform publishing
+SEO optimization engine
+Marketing campaign forecasting
+Docker Compose deployment
+Kubernetes support
+👨‍💻 Author
 
----
+Pankaj Bhattacharjee
 
-### 📈 Metrics Engine & Sheets Integration
-
-Stores:
-
-* Impressions
-* Clicks
-* CTR
-* Trend score
-* Sentiment
-* Conversions
-
-Feeds into ML model.
-
----
-
-### 🤖 ML Model Training & Auto-Retraining
-
-* RandomForestClassifier
-* Hyperparameter tuning via GridSearch
-* Balanced via SMOTE
-* Auto model versioning
-* Slack notification after retrain
-
----
-
-### 📡 Slack Notification System
-
-* A/B test winner summaries
-* Auto-retrainer updates
-* Custom user messages
-
----
-
-### 🖥️ Streamlit Dashboard
-
-Complete UI for interacting with all modules:
-
-* Generate
-* Analyze
-* Compare
-* Train
-* Log metrics
-* Send alerts
+AI & Machine Learning Engineer
+Python Backend Developer
+Generative AI Enthusiast
+Streamlit & LLM Application Developer
+⭐ Key Highlights
+End-to-End AI Marketing Automation
+Production-Ready Machine Learning Pipeline
+LLM-Powered Content Generation
+Trend-Aware Optimization
+Automated Model Retraining
+Interactive Streamlit Dashboard
+Google Sheets & Slack Integration
+GitHub Actions CI/CD Pipeline
+Modular Python Architecture
+Industry-Ready Project Structure
